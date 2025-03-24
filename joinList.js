@@ -13,6 +13,23 @@
 // ...
 
 // Test / Driver Code below...
+const joinList = function(arr) {
+
+  let newStr = '';
+  const arrLength = arr.length;
+  
+  if (arrLength === 0) {
+    return newStr;
+  } else if (arrLength === 1) {
+    return arr[0];
+  } else {
+    for (let arrIndex = 0; arrIndex < arrLength - 1; arrIndex++) {
+      newStr += `${arr[arrIndex]}, `;
+    }
+    return newStr + `${arr[arrLength - 1]}`;
+  }
+};
+
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
 const concepts = joinList(conceptList);
 
